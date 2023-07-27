@@ -24,9 +24,11 @@ p {
   font-size: 1.1em;
   text-shadow: 0 1px 0 rgba(0,0,0, .25);
 }
+
 #invited-list {
- display: inline-block;
+  /* display: inline-block; */
 }
+
 
 /* Form Elements */
 
@@ -36,7 +38,6 @@ form {
   display: flex;
   border-radius: 0.2em;
   border: solid 4px white;
-  background-color: white;
   box-shadow: 0 1px 14px rgba(0,0,0, .12);
 }
 form input {
@@ -74,10 +75,10 @@ button {
 header {
   color: white; 
   text-align: center;
-  background-image: url('../challenge/header-bg.jpg') cover;
+  background: linear-gradient(90deg, #d4eece, #55b3d0, #1e7eb7),
+  url('../challenge/header-bg.jpg') no-repeat;
   background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(90deg, #d4eece, #55b3d0, #1e7eb7);      
+  background-size: cover;    
 }
 
 
@@ -109,7 +110,7 @@ header {
   display: block;
   color: rgba(112, 112, 112, .55);
 }
-button {
+.guest button {
   font-size: 0.78em;
   margin-top: 1.65em;
   margin-right: 0.4em;
@@ -118,7 +119,7 @@ button {
   color: white;
   background-color: #58b7cd;
 }
-button:last-child {
+.guest button:last-child {
   background-color: rgba(88, 183, 205, 0.5);
 }
 
@@ -192,7 +193,8 @@ button:last-child {
     margin-right: 1.25%;
   }
   .guest-list {
-    display: flex;    
+    display: flex;
+    clear: both;    
     justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 1.25em;
